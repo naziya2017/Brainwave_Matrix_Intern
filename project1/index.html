@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 style="text-align: center">To Do List</h2>
+        <label for="title">Task:</label>
+        <input type="text" id="title" />
+        <label for="description">Description:</label>
+        <input type="text" id="description">
+        <input type="datetime-local" id="reminderTime">
+
+        <button type="submit" style="width: 100%" onclick="scheduleReminder()">
+            Add
+        </button>
+
+        <table boarder="1">
+
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Date and Time</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="remainderTableBody"></tbody>
+            
+        </table>
+    </div>
+    <audio src="Over_the_Horizon.mp3" id="notificationSound"></audio>
+    <script src="script.js"></script>
+
+</body>
+</html>
